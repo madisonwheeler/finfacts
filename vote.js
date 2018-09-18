@@ -18,13 +18,19 @@ function revealAnswers(){
 };
 
 b1.addEventListener("click", function(){
-  b1.classList.add("selected");
+  if(!(b2.classList.contains("selected") || b3.classList.contains("selected"))){
+      b1.classList.add("selected");
+  }
   revealAnswers();})
 
 b2.addEventListener("click", function(){
-  b2.classList.add("selected");
+  if(!(b1.classList.contains("selected") || b3.classList.contains("selected"))){
+      b2.classList.add("selected");
+  }
   revealAnswers();})
 
 b3.addEventListener("click", function(){
-  b3.classList.add("selected");
+  if(!(b1.classList.contains("selected") || b2.classList.contains("selected"))){
+      b3.classList.add("selected");
+  }
   revealAnswers();})
