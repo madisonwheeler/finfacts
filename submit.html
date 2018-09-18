@@ -3,9 +3,15 @@
 <head>
   <link rel="stylesheet" type="text/css" href="style.css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 </head>
 
 <body>
+
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand">FinFacts</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,21 +34,22 @@
 
     </div>
   </nav>
-  <div class="container">
-    <center>
-      <div style="padding-top:20px; padding-bottom:20px;">
-        <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRbezqZpEuwGSvitKy3wrwnth5kysKdRqBW54cAszm_wiutku3R" name="aboutme" width="140" height="140" class="profile-image"></a>
-        <h3 class="media-heading"> Pick <b>Joe Sixpack</b>'s lie</h3>
-      </div>
-    </center>
-
-    <div>
-      <button type="button" class="btn btn-primary btn-lg btn-block preselect-button">Option 1</button>
-      <button type="button" class="btn btn-primary btn-lg btn-block preselect-button">Option 2</button>
-      <button type="button" class="btn btn-primary btn-lg btn-block preselect-button">Option 3</button>
-    </div>
-
+  <div class="container" style="padding-top:20px">
+  <form>
+  <div class="form-group">
+    <label for="truth-one">Truth</label>
+    <input type="truth" class="form-control" id="truth-one" placeholder="Enter a fact about yourself!">
   </div>
+  <div class="form-group">
+    <label for="truth-two">Truth</label>
+    <input type="truth" class="form-control" id="truth-two" placeholder="Enter another fact about yourself!">
+  </div>
+  <div class="form-group">
+    <label for="lie">Lie</label>
+    <input type="lie" class="form-control" id="lie" placeholder="Enter a lie!">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
 </body>
-
 </html>

@@ -3,6 +3,21 @@
   color: black !important;
   border: none !important;
 }
+.truth-button{
+  background-color: #ADF7B6 !important;
+  color: black !important;
+  border: none !important;
+  filter: opacity(50%);
+}
+.lie-button{
+  background-color: #FF7768 !important;
+  color: black !important;
+  border: none !important;
+}
+.selected{
+  border-color: #007bff !important;
+  border-style: solid !important;
+}
 .profile-image{
   border-radius: 50%;
 }
@@ -11,4 +26,12 @@
 {
 	width: 200px;
 	height: 50px;
+}
+
+input, label{
+ display: inline-block;
+ vertical-align: middle;
+ margin: 10px 0;
+ font-size: 20;
+ padding-right: 10px;
 }
