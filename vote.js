@@ -8,6 +8,7 @@ console.log(labels);
 
 b1.addEventListener("click", function(){
   next.removeAttribute("hidden");
+  b1.classList.add("selected");
   buttons.forEach(function(item) {
     item.classList.add("revealed");
     item.classList.remove("unrevealed");
@@ -18,6 +19,7 @@ b1.addEventListener("click", function(){
 
 b2.addEventListener("click", function(){
   next.removeAttribute("hidden");
+  b2.classList.add("selected");
   buttons.forEach(function(item) {
     item.classList.add("revealed");
     item.classList.remove("unrevealed");
@@ -28,6 +30,7 @@ b2.addEventListener("click", function(){
 
 b3.addEventListener("click", function(){
   next.removeAttribute("hidden");
+  b3.classList.add("selected");
   buttons.forEach(function(item) {
     item.classList.add("revealed");
     item.classList.remove("unrevealed");
