@@ -1,18 +1,22 @@
-.preselect-button{
+.unrevealed{
   background-color: #FCF5C7 !important;
   color: black !important;
   border: none !important;
 }
-.truth-button{
-  background-color: #ADF7B6 !important;
+.revealed{
+  max-width: 90%;
+  /* float: right; */
   color: black !important;
   border: none !important;
+
+}
+
+.truth-button.revealed{
+  background-color: #ADF7B6 !important;
   filter: opacity(50%);
 }
-.lie-button{
+.lie-button.revealed{
   background-color: #FF7768 !important;
-  color: black !important;
-  border: none !important;
 }
 .selected{
   border-color: #007bff !important;
