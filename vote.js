@@ -6,35 +6,25 @@ var labels = document.querySelectorAll("label");
 var next = document.getElementById("next");
 console.log(labels);
 
-b1.addEventListener("click", function(){
+function revealAnswers(){
   next.removeAttribute("hidden");
-  b1.classList.add("selected");
   buttons.forEach(function(item) {
     item.classList.add("revealed");
     item.classList.remove("unrevealed");
   });
   labels.forEach(function(item) {
     item.removeAttribute("hidden");
-  });})
+  });
+};
+
+b1.addEventListener("click", function(){
+  b1.classList.add("selected");
+  revealAnswers();})
 
 b2.addEventListener("click", function(){
-  next.removeAttribute("hidden");
   b2.classList.add("selected");
-  buttons.forEach(function(item) {
-    item.classList.add("revealed");
-    item.classList.remove("unrevealed");
-  });
-  labels.forEach(function(item) {
-    item.removeAttribute("hidden");
-  });})
+  revealAnswers();})
 
 b3.addEventListener("click", function(){
-  next.removeAttribute("hidden");
   b3.classList.add("selected");
-  buttons.forEach(function(item) {
-    item.classList.add("revealed");
-    item.classList.remove("unrevealed");
-  });
-  labels.forEach(function(item) {
-    item.removeAttribute("hidden");
-  });})
+  revealAnswers();})
