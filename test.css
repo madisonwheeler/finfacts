@@ -1,0 +1,14 @@
+.off{
+  background: Green;
+}
+
+.on{
+  background: Red;
+}
+
+.dot{
+  width: 20px;
+  height: 20px;
+  background: red;
+  position: absolute;
+}
