@@ -4,7 +4,7 @@
 
 .btn.truth-button, .btn.lie-button {
   color: black !important;
-  border: none !important;
+  border: none;
   height: 16%;
   font-size: 25px !important;
   white-space: normal !important;

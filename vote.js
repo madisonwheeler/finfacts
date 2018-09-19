@@ -29,17 +29,17 @@ b1.addEventListener("click", function(){
 
   if(!(b2.classList.contains("selected") || b3.classList.contains("selected"))){
       b1.classList.add("selected");
-  }
-  revealAnswers(1);})
+      revealAnswers(1);
+  }})
 
 b2.addEventListener("click", function(){
   if(!(b1.classList.contains("selected") || b3.classList.contains("selected"))){
       b2.classList.add("selected");
-  }
-  revealAnswers(2);})
+      revealAnswers(2);
+  }})
 
 b3.addEventListener("click", function(){
   if(!(b1.classList.contains("selected") || b2.classList.contains("selected"))){
       b3.classList.add("selected");
-  }
-  revealAnswers(3);})
+      revealAnswers(3);
+  }})
