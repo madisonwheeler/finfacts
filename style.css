@@ -1,13 +1,21 @@
 .unrevealed{
   background-color: #FCF5C7 !important;
-  color: black !important;
-  border: none !important;
 }
-.revealed{
-  color: black !important;
-  border: none !important;
 
+.btn.truth-button, .btn.lie-button {
+  color: black !important;
+  border: none !important;
+  height: 16%;
+  font-size: 25px !important;
+  white-space: normal !important;
 }
+
+.form-control {
+  font-size: 25px !important;
+  height: 6% !important;
+  white-space: normal !important;
+}
+
 
 .truth-button.revealed{
   background-color: #ADF7B6 !important;
