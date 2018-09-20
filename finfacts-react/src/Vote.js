@@ -124,7 +124,7 @@ export class Vote extends React.Component {
     {
       fact: true,
       statement: responses[this.state.response_index].truth2,
-      percent: (100 - truthValue1 - lieValue).toString() + "%",
+      percent: Math.max((100 - truthValue1 - lieValue),0).toString() + "%",
     },
     {
       fact: false,

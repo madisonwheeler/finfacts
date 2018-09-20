@@ -13,6 +13,10 @@ export class Submit extends React.Component {
         <input type="name" className="form-control" id="name" placeholder="First Last"></input>
       </div>
       <div className="form-group">
+        <label style = {{fontSize : '30px'}} htmlFor="image">Image</label>
+        <input type="img_url" className="form-control" id="image" placeholder="Enter a link to a profile image"></input>
+      </div>
+      <div className="form-group">
         <label style = {{fontSize : '30px'}} htmlFor="truth-one">Truth</label>
         <input type="truth" className="form-control" id="truth-one" placeholder="Enter a fact about yourself!"></input>
     <input type="truth" className="form-control" id="truth-two" placeholder="Enter another fact about yourself!" style= {{marginTop:'10px'}}></input>
