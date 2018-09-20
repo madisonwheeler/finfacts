@@ -1,41 +1,46 @@
 import React from 'react';
-import dolphin from './dolphin.jpg';
 import './App.css';
 
 
 var responses = [
   {
     "name": "Finneus",
+    "image": "https://image.ibb.co/kfFv6e/1.jpg",
     "truth1": "There are 44 different dolphin species.",
     "truth2": "Dolphins typically give birth to one calf.",
     "lie": "Dolphins sleep for several hours at a time."
   },
   {
     "name": "Flipper",
+    "image": "https://image.ibb.co/bCmeXK/2.jpg",
     "truth1": "The U.S. Navy trains dolphins to protect nuclear weapons.",
     "truth2": "Dolphins are not the same as porpoises.",
     "lie": "The oldest dolphin in captivity lived to 85 years old."
   },
   {
     "name": "Kelp",
+    "image": "https://image.ibb.co/j3Dhme/3.jpg",
     "truth1": "A superpod can consist of more than 1000 dolphins.",
     "truth2": "Dolphins don't use their teeth to chew food.",
     "lie": "In 2001, the Yangtze River dolphin was named functionally extinct."
   },
   {
     "name": "Splash",
+    "image": "https://preview.ibb.co/dXCa6e/4.jpg",
     "truth1": "Images of dolphins have been found carved into the desert city of Petra, Jordan.",
     "truth2": "The blowhole of a dolphin is actually an adapted nose.",
     "lie": "Dolphins were thought to be a lot larger hundreds of years ago."
   },
   {
     "name": "Aqua",
+    "image": "https://image.ibb.co/fUhKXK/5.jpg",
     "truth1": "Dolphin sonar is the best within nature and superior to bats.",
     "truth2": "Dolphins must tell themselves when to breathe, it's not an automatic response.",
     "lie": "Dolphins don't have livers, but have two gall bladders."
   },
   {
     "name": "Sea(n)",
+    "image": "https://image.ibb.co/jM3bCK/7.jpg",
     "truth1": "Dolphins are born with a mustache.",
     "truth2": "Dolphins can talk and understand each other over the phone.",
     "lie": "Baby dolphins are born head-first to prevent drowning."
@@ -117,6 +122,7 @@ export class Vote extends React.Component {
     button_content.sort(randomize);
     this.setState({
       name: responses[this.state.response_index].name,
+      image: responses[this.state.response_index].image,
       button_content: button_content,
       response_index: (this.state.response_index + 1) % responses.length,
     })
@@ -175,7 +181,7 @@ export class Vote extends React.Component {
       <div className="container">
         <center>
           <div style={{paddingTop: '20px', paddingBottom:'20px'}}>
-            <img src={dolphin} width="140" height="140" className="profile-image"></img>
+            <img src={this.state.image} width="140" height="140" className="profile-image"></img>
             <h3 className="media-heading"> Pick <b>{this.state.name}</b>&#39;s lie</h3>
           </div>
         </center>
