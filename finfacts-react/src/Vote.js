@@ -149,28 +149,28 @@ export class Vote extends React.Component {
   b1Click = ()=>{
     if (!(this.refs.b2.classList.contains("selected") | this.refs.b3.classList.contains("selected"))){
       this.refs.b1.classList.add("selected");
+      var symbol = this.state.button_content[0].fact ? this.refs.w1 : this.refs.r1;
+      symbol.classList.remove("hidden");
     }
     this.reveal();
-    var symbol = this.state.button_content[0].fact ? this.refs.w1 : this.refs.r1;
-    symbol.classList.remove("hidden");
   }
 
   b2Click = ()=>{
     if (!(this.refs.b1.classList.contains("selected") | this.refs.b3.classList.contains("selected"))){
       this.refs.b2.classList.add("selected");
+      var symbol = this.state.button_content[1].fact ? this.refs.w2 : this.refs.r2;
+      symbol.classList.remove("hidden");
     }
     this.reveal();
-    var symbol = this.state.button_content[1].fact ? this.refs.w2 : this.refs.r2;
-    symbol.classList.remove("hidden");
   }
 
   b3Click = ()=>{
     if (!(this.refs.b1.classList.contains("selected") | this.refs.b2.classList.contains("selected"))){
       this.refs.b3.classList.add("selected");
+      var symbol = this.state.button_content[2].fact ? this.refs.w3 : this.refs.r3;
+      symbol.classList.remove("hidden");
     }
     this.reveal();
-    var symbol = this.state.button_content[2].fact ? this.refs.w3 : this.refs.r3;
-    symbol.classList.remove("hidden");
   }
 
   componentDidMount() {
