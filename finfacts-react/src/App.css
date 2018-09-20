@@ -38,6 +38,11 @@
   white-space: normal !important;
 }
 
+.nav-button{
+  background-color: Transparent !important;
+  margin-right: 8px;
+}
+
 .form-control {
   font-size: 25px !important;
   height: 6% !important;

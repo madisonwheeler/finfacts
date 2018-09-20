@@ -1,8 +1,13 @@
 import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {Submit} from './Submit';
+import {Vote} from './Vote';
 
 export class NavBar extends React.Component {
+  toSubmit = ()=>{
+    this.setState({vote:false});
+  }
   render() {
     return (
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -13,12 +18,10 @@ export class NavBar extends React.Component {
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
-            <li className="nav-item active">
-              <a className="nav-link" href="vote.html">Vote</a>
-            </li>
-            <li className="nav-item">
+          <button className="btn" onClick={this.toSubmit}>This should go to submit</button>
+            <button className="nav-item">
               <a className="nav-link" href="submit.html">Submit<span className="sr-only">(current)</span></a>
-            </li>
+            </button>
 
           </ul>
 
