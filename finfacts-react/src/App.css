@@ -31,10 +31,9 @@
   background-color: #FCF5C7 !important;
 }
 
-.btn.truth-button, .btn.lie-button {
+.unrevealed, .revealed {
   color: black !important;
-  border: none;
-  height: 16%;
+  border: none !important;
   font-size: 25px !important;
   white-space: normal !important;
 }
@@ -45,6 +44,9 @@
   white-space: normal !important;
 }
 
+.hidden {
+  display: none !important;
+}
 
 .truth-button.revealed{
   background-color: #ADF7B6 !important;
