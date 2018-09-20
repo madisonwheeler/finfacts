@@ -45,6 +45,13 @@ var responses = [
     "truth2": "Dolphins can talk and understand each other over the phone.",
     "lie": "Baby dolphins are born head-first to prevent drowning."
   },
+  {
+    "name": "M&M",
+    "image": "https://pbs.twimg.com/profile_images/950666351089201152/vFcxX6i9_400x400.jpg",
+    "truth1": "One of us is named Maryam",
+    "truth2": "One of us is named Madison",
+    "lie": "One of us is named Mitch"
+  },
 ]
 function randomize(a, b) {
     return Math.random() - 0.5;
@@ -59,15 +66,18 @@ export class Vote extends React.Component {
       name: "",
       button_content: [{
         fact: true,
-        statement: "temp1",
+        statement: "",
+        percent: "",
       },
       {
         fact: true,
-        statement: "temp2",
+        statement: "",
+        percent: "",
       },
       {
         fact: true,
-        statement: "temp3",
+        statement: "",
+        percent: "",
       }],
       responses: responses,
     };
@@ -104,17 +114,22 @@ export class Vote extends React.Component {
     to_hide.forEach(function(item) {
       item.classList.add("hidden");
     })
+    var lieValue = Math.floor(Math.random() * 40) + 50;
+    var truthValue1 = Math.round(((100 - lieValue)/2) + (2 * this.state.response_index));
     var button_content = [{
       fact: true,
       statement: responses[this.state.response_index].truth1,
+      percent: (truthValue1).toString() + "%",
     },
     {
       fact: true,
       statement: responses[this.state.response_index].truth2,
+      percent: (100 - truthValue1 - lieValue).toString() + "%",
     },
     {
       fact: false,
       statement: responses[this.state.response_index].lie,
+      percent: (lieValue).toString() + "%",
     }]
     function randomize(a, b) {
         return Math.random() - 0.5;
@@ -188,7 +203,7 @@ export class Vote extends React.Component {
 
           <div className="container">
               <div className="d-flex">
-                  <div className="align-self-center"><label ref="l1" >35%</label></div>
+                  <div className="align-self-center"><label ref="l1" >{this.state.button_content[0].percent}</label></div>
                   <div className="flex-grow-1"><button onClick={this.b1Click} type="button" ref="b1" id="b1" className="btn btn-primary btn-lg btn-block unrevealed">{this.state.button_content[0].statement}</button></div>
                   <div className="ml-auto align-self-center" ref="w1" id="w1" style={{paddingLeft:"10px"}}><i className="fas fa-times fa-3x"></i> </div>
                   <div className="ml-auto align-self-center" ref="r1" id="r1" style={{paddingLeft:"10px"}}><i className="fas fa-check fa-3x"></i> </div>
@@ -196,7 +211,7 @@ export class Vote extends React.Component {
           </div>
           <div className="container" style={{paddingTop:"10px"}}>
               <div className="d-flex">
-                  <div className="align-self-center"><label ref="l2" >35%</label></div>
+                  <div className="align-self-center"><label ref="l2" >{this.state.button_content[1].percent}</label></div>
                   <div className="flex-grow-1"><button onClick={this.b2Click} type="button" ref="b2" id="b2" className="btn btn-primary btn-lg btn-block unrevealed">{this.state.button_content[1].statement}</button></div>
                   <div className="ml-auto align-self-center" ref="w2" id="w2" style={{paddingLeft:"10px"}}><i className="fas fa-times fa-3x"></i> </div>
                   <div className="ml-auto align-self-center" ref="r2" id="r2" style={{paddingLeft:"10px"}}><i className="fas fa-check fa-3x"></i> </div>
@@ -204,7 +219,7 @@ export class Vote extends React.Component {
           </div>
           <div className="container" style={{paddingTop:"10px"}}>
               <div className="d-flex">
-                  <div className="align-self-center"><label ref="l3" >30%</label></div>
+                  <div className="align-self-center"><label ref="l3" >{this.state.button_content[2].percent}</label></div>
                   <div className="flex-grow-1"><button onClick={this.b3Click} type="button" ref="b3" id="b3" className="btn btn-primary btn-lg btn-block unrevealed">{this.state.button_content[2].statement}</button></div>
                   <div className="ml-auto align-self-center" ref="w3" id="w3" style={{paddingLeft:"10px"}}><i className="fas fa-times fa-3x"></i> </div>
                   <div className="ml-auto align-self-center" ref="r3" id="r3" style={{paddingLeft:"10px"}}><i className="fas fa-check fa-3x"></i> </div>

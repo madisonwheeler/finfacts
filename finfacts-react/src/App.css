@@ -43,6 +43,10 @@
   margin-right: 8px;
 }
 
+.logo{
+  margin-right: 40px;
+}
+
 .form-control {
   font-size: 25px !important;
   height: 6% !important;
