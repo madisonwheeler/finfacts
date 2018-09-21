@@ -116,6 +116,8 @@ export class Vote extends React.Component {
     })
     var lieValue = Math.floor(Math.random() * 40) + 50;
     var truthValue1 = Math.round(((100 - lieValue)/2) + (2 * this.state.response_index));
+    var truthValue2 = Math.max((100 - truthValue1 - lieValue),2);
+    truthValue1 = 100 - truthValue2 - lieValue;
     var button_content = [{
       fact: true,
       statement: responses[this.state.response_index].truth1,
@@ -124,7 +126,7 @@ export class Vote extends React.Component {
     {
       fact: true,
       statement: responses[this.state.response_index].truth2,
-      percent: Math.max((100 - truthValue1 - lieValue),0).toString() + "%",
+      percent: (truthValue2).toString() + "%",
     },
     {
       fact: false,
