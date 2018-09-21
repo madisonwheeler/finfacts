@@ -230,7 +230,7 @@ export class Vote extends React.Component {
 
         <center>
           <div style={{paddingTop:"20px"}}>
-            <button onClick={this.populate} ref="next" id="next" style={{height:"10%", width:"15%"}}  className="btn btn-primary" type="submit">Next</button>
+            <button onClick={this.populate} ref="next" id="next" style={{height:"10%", width:"15%"}}  title="Next" className="btn btn-primary" type="submit"><i className="fas fa-arrow-right fa-2x"></i></button>
           </div>
         </center>
 
