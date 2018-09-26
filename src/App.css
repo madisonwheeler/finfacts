@@ -1,0 +1,87 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.unrevealed{
+  background-color: #FCF5C7 !important;
+}
+
+.unrevealed, .revealed {
+  color: black !important;
+  border: none !important;
+  font-size: 25px !important;
+  white-space: normal !important;
+}
+
+.nav-button{
+  background-color: Transparent !important;
+  margin-right: 8px;
+}
+
+.logo{
+  margin-right: 40px;
+}
+
+.form-control {
+  font-size: 25px !important;
+  height: 6% !important;
+  white-space: normal !important;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.truth-button.revealed{
+  background-color: #ADF7B6 !important;
+  filter: opacity(50%);
+}
+.lie-button.revealed{
+  background-color: #FF7768 !important;
+}
+.selected{
+  border-color: #007bff !important;
+  border-style: solid !important;
+}
+.profile-image{
+  border-radius: 50%;
+}
+
+.instructions
+{
+	width: 200px;
+	height: 50px;
+}
+
+input, label{
+ display: inline-block;
+ vertical-align: middle;
+ margin: 10px 0;
+ font-size: 50;
+ padding-right: 10px;
+}
